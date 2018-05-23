@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JPanel;
@@ -15,6 +16,7 @@ public class Observer extends JPanel {
 	/* initialise all relevant components */
 	public Observer() {
 		setLayout(null);
+		setBackground(Color.WHITE);
 		setPreferredSize(new Dimension(WIDTH, HEIGHT));
 		setFocusable(true);
 		requestFocus();

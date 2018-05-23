@@ -4,22 +4,18 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-import model.MainModel;
+import model.MouseModel;
 
 public class MouseController implements MouseListener, MouseMotionListener{
 	
 	/* Copy of the model */
-	private MainModel model;
-	
-	/* boolean variable to be used once for this demonstration */
-	private boolean once;
+	private MouseModel model;
 	
 	/* integer to hold the selected id of the rectangle object */
 	private int selection;
 	
-	public MouseController(MainModel model) {
+	public MouseController(MouseModel model) {
 		this.model = model;
-		once = true;
 		selection = -1;
 	}
 
@@ -38,11 +34,6 @@ public class MouseController implements MouseListener, MouseMotionListener{
 	 * and check if the mouse is inside the bounds of a
 	 * rectangle */
 	public void mousePressed(MouseEvent e) {
-		if(once) {
-			model.addRectangle(10, 10, 160, 90);
-			once = false;
-			return;
-		}
 		int x = e.getX(), y = e.getY();
 		selection = model.selectedRectangle(x, y);
 	}
