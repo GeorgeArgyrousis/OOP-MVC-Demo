@@ -1,5 +1,8 @@
 # OOP Model Viewer Controller
 
+Class Diagram
+![diagram](diagram.gif)
+
 A small application made to demonstrate how you can make scallable mvc demo without a log of code.
 
 ## Instructions
