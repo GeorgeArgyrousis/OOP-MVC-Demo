@@ -16,15 +16,15 @@ public class MouseController implements MouseListener, MouseMotionListener{
 	
 	public MouseController(MouseModel model) {
 		this.model = model;
-		selection = -1;
+		this.selection = -1;
 	}
 
 	@Override
 	/* Update the rectangle based on the position 
 	 * of the mouse */
 	public void mouseDragged(MouseEvent e) {
-		int x = e.getX(), y = e.getY();
 		if(selection > -1) {
+			int x = e.getX(), y = e.getY();
 			model.updateRectangle(selection, x, y);
 		}
 	}

@@ -9,7 +9,7 @@ public class MainModel extends Observable{
 	/* List of all rectangles */
 	private ArrayList<Rectangle> rectangles;
 	
-	/* Call superconstructor, initalise components */
+	/* Initalise components */
 	public MainModel() {
 		super();
 		rectangles = new ArrayList<Rectangle>();

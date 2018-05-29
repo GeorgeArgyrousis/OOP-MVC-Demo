@@ -9,10 +9,8 @@ import view.MainPanel;
 public class MainController {
 
 	public MainController() {
-		/* Initialize the model */
-		MainModel model = new MainModel();
 		/* Differentiate the model for different controllers */
-		
+		MainModel model = new MainModel();
 		/* Model view for the mouse controller */
 		MouseModel mouseModel = new MouseModel(model);
 		/* Model access for the view */
@@ -20,7 +18,7 @@ public class MainController {
 		/* Initialize the view with a model copy */
 		MainPanel panel = new MainPanel(viewModel);
 		/* Initialize the Menu Controller with the viewModel */
-		MenuController menuController = new MenuController(viewModel);
+		MenuController menuController = new MenuController(mouseModel);
 		/* Initialize the controler with a copy of the Mouse Model */
 		MouseController mouseController = new MouseController(mouseModel);
 		/* add the listeners to the view */

@@ -1,26 +1,35 @@
 package view;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
+import javax.swing.JPanel;
 
 import model.ViewModel;
 import model.objects.Rectangle;
 
-public class MainPanel extends Observer{
+public class MainPanel extends JPanel implements Observer{
 
 	/* serialVersionUID */
 	private static final long serialVersionUID = 1L;
+	
+	/* variables defining the dimensions of the frame */
+	private final int BASE = 50, WIDTH = BASE * 16, HEIGHT = BASE * 9; 
 	
 	/* A Viewer model copy to render */
 	private ViewModel model;
 	
 	/* Initialize the relevant component */
 	public MainPanel(ViewModel model) {
-		super();
 		this.model = model;
+		setLayout(null);
+		setBackground(Color.WHITE);
+		setPreferredSize(new Dimension(WIDTH, HEIGHT));
+		setFocusable(true);
+		requestFocus();
 	}
 	
 	/* Deafault method called by the JPanel object to draw */
@@ -50,5 +59,10 @@ public class MainPanel extends Observer{
 			button.setOpaque(true);
 			this.add(button);
 		}
+	}
+
+	@Override
+	public void render() {
+		this.repaint();
 	}
 }

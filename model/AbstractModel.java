@@ -1,12 +1,12 @@
 package model;
 
-public abstract class Model {
+public abstract class AbstractModel {
 	
 	/* The main model containing low level access */
 	private MainModel model;
 	
 	/* Initiate the relevant components (injection) */
-	public Model(MainModel model) {
+	public AbstractModel(MainModel model) {
 		this.model = model;
 	}
 	

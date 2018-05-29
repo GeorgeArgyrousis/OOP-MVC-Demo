@@ -2,11 +2,16 @@ package model;
 
 import model.objects.Rectangle;
 
-public class MouseModel extends Model{
+public class MouseModel extends AbstractModel{
 	
 	/* Init the Model superclass */
 	public MouseModel(MainModel model) {
 		super(model);
+	}
+	
+	/* Add a rectangle from the view */
+	public void addRectangle(int x, int y, int width, int height) {
+		getModel().addRectangle(new Rectangle(x, y, width, height));
 	}
 	
 	/* Get the id of the selected rectangle based on 

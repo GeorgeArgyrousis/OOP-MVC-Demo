@@ -6,18 +6,18 @@ import java.util.ArrayList;
 
 import javax.swing.JButton;
 
-import model.ViewModel;
+import model.MouseModel;
 
 public class MenuController {
 	
 	/* The View Model copy */
-	private ViewModel model;
+	private MouseModel model;
 	
 	/* A list of all the buttons */
 	private ArrayList<JButton> buttons;
 	
 	/* Initiate all relevant components */
-	public MenuController(ViewModel model) {
+	public MenuController(MouseModel model) {
 		this.model = model;
 		buttons = new ArrayList<JButton>();
 		addJButton(new JButton(ButtonType.AddRectangle.getType()));

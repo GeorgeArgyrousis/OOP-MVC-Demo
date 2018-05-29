@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import view.Observer;
 
-public class Observable {
+public abstract class Observable {
 	
 	/* List of all the views */
 	private ArrayList<Observer> observers; 

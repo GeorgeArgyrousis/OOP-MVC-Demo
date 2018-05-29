@@ -1,6 +1,7 @@
 # OOP Model Viewer Controller
 
 ## Class Diagram
+NOTE :: the class diagram is not updated to the latest commit!
 ![diagram](diagram.gif)
 
 A small application made to demonstrate how you can make scallable mvc demo without a log of code.
